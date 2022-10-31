@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>E-commerce</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<style >
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body{
+			width: 100%;
+			height: 100vh;
+			background: white;
+		}
+		header{
+			position:fixed;
+			top:0;left: 0;right:0;
+			z-index:1000;
+			display:flex;
+			align-items:center;
+			justify-content:row;
+			background: green;
+			padding:.5rem 2%;
+			box-shadow: 0.5rem 1rem rgba(0,0,0,.1);
+		}
+		.navbar{
+			display: flex;
+			justify-content: flex-start;
+		}
+		
+		.logo{
+			/*align-items: left;
+			margin-left: 20px;
+			margin-top: 10px;
+			margin-bottom: 10px;*/
+			padding-right: 2.5rem;
+			font-weight: bolder;
+			color:#666;
+			font-size: 3rem;
+			border-right: 30rem;
+
+		}
+		#ca{
+			font-size: 2rem;
+			/*margin-left: 30rem;*/
+			display: flex;
+		/*	justify-content: flex-start;*/
+		align-items: right;
+		/*	color:#666;*/
+			
+		}
+		.container{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			margin: 4rem auto;
+		}
+		.product-list{
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			align-items: center;
+			text-align: center;
+			flex-wrap: wrap;
+			width: 90%;
+			margin-top: 20px;
+		}
+		.product{
+			width: 250px;
+			padding: 1rem;
+		    margin-top: 30px;
+
+		}
+		.product img{
+			width: 100%;
+			display: block;
+			box-shadow: 5px 5px 10px black;
+			height: 150px;
+		}
+		.pro{
+			border-radius: 5px;
+		    
+		    justify-content: space-between;
+		    border: 1px solid #939697;
+		    cursor: pointer;
+		    background-color: #c5e1e6;
+		    height: 50px;
+		    
+		    padding: 5px 10px;
+		    display: flex;
+		}
+		.pro span{
+			font-family: 'Poppins',sans-serif;
+		    font-size: 15px;
+		    font-weight: 400;
+		}
+		.pro img{
+			width: 100px;
+			height: 30px;
+		}
+
+	</style>
+</head>
+<body>
+	<header>
+		<nav class="navbar">
+			<img src="logo.jpg" class="logo" width="100" height="80">
+			<div id="ca"><span><i class="fa fa-cart-shopping" aria-hidden="true"></i>CART</span></div>
+			
+
+		</nav>
+	</header>
+	<div class="container">
+		<div class="product-list">
+		<div class="product">
+			<img src="p1.jpg" id="pimg" alt="">
+			<h3 id="name" data-name="mobile">Mobile</h3>
+			<h2 id="price">16,000/-</h2>
+			<button class="button" onclick="dis()" >Add to Cart</button>
+		</div>
+		<div class="product">
+			<img src="p2.jpg" class="pimg" alt="">
+			<h3 class="name">TV</h3>
+			<h2 class="price">50,000/-</h2>
+			<button class="button" onclick="dis()">Add to Cart</button>
+		</div>
+		<div class="product">
+			<img src="p3.jpg" class="pimg" alt="">
+			<h3 class="name">Laptop</h3>
+			<h2 class="price">46,000/-</h2>
+			<button class="button" onclick="dis()">Add to Cart</button>
+		</div>
+		<div class="product">
+			<img src="p4.jpg" class="pimg" alt="">
+			<h3 class="name">computer</h3>
+			<h2 class="price">60,000/-</h2>
+			<button class="button"onclick="dis()">Add to Cart</button>
+		</div>
+		<div class="product">
+			<img src="p5.jpg" class="pimg" alt="">
+			<h3 class="name">CPU</h3>
+			<h2 class="price">30,000/-</h2>
+			<button class="button"onclick="dis()">Add to Cart</button>
+		</div>
+		<div class="product">
+			<img src="p6.jpg" class="pimg" alt="">
+			<h3 class="name">Washing Machine</h3>
+			<h2 class="price">40,000/-</h2>
+			<button class="button" onclick="dis()">Add to Cart</button>
+		</div>
+		<div class="product">
+			<img src="p7.jpg" class="pimg" alt="">
+			<h3 class="name">Oven</h3>
+			<h2 class="price">20,000/-</h2>
+			<button class="button" onclick="dis()">Add to Cart</button>
+		</div>
+		<div class="product">
+			<img src="p8.jpg" class="pimg" alt="">
+			<h3 class="name">AC</h3>
+			<h2 class="price">45,000/-</h2>
+			<button class="button" onclick="dis()">Add to Cart</button>
+		</div>
+		<div class="product">
+			<img src="p9.jpg" class="pimg" alt="">
+			<h3 class="name">Fan</h3>
+			<h2 class="price">18,000/-</h2>
+			<button class="button" onclick="dis()">Add to Cart</button>
+		</div>
+		<div class="product">
+			<img src="p10.jpg" class="pimg" alt="">
+			<h3 class="name">Cooler</h3>
+			<h2 class="price">30,000/-</h2>
+			<button class="button" onclick="dis()">Add to Cart</button>
+		</div>
+	</div>
+	</div>
+	<!-- <table class="table">
+		<thead>
+			<tr>Shopping List</tr>
+		</thead>
+		<tbody id="itemlist">
+			
+		</tbody>
+	</table> -->
+	<div id="tablec"></div>
+	<div id="count"></div>
+	<script >
+		const list=document.getElementById('itemlist');
+		 
+		
+		function dis(){
+			
+			const imgg=document.getElementById("pimg").getAttribute('src');
+			const price=document.getElementById("price");
+			const name=document.getElementById("name");
+			document.querySelector('#tablec').innerHTML += `
+		            <div class="pro">
+		                <span id="pi">
+		                    <img src="${document.getElementById("pimg").getAttribute('src')}"/>
+		                </span>
+		                <span id="pr">
+		                    ${price.textContent}
+		                </span>
+		                <span id="na">
+		                    ${name.textContent}
+		                </span>
+
+		                <button class="delete">
+		                    Remove
+		                </button>
+		            </div>
+		        `;
+		        var tasks = document.querySelectorAll(".delete");
+		        for(var i=0; i<tasks.length; i++){
+		            tasks[i].onclick = function(){
+		                this.parentNode.remove();
+		            }
+		        }
+		        
+
+		}
+		
+		
+	</script>
+	
+
+</body>
+</html>
